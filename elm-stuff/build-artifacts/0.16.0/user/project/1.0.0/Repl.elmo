@@ -1,0 +1,21 @@
+Elm.Repl = Elm.Repl || {};
+Elm.Repl.make = function (_elm) {
+   "use strict";
+   _elm.Repl = _elm.Repl || {};
+   if (_elm.Repl.values) return _elm.Repl.values;
+   var _U = Elm.Native.Utils.make(_elm),
+   $Basics = Elm.Basics.make(_elm),
+   $Debug = Elm.Debug.make(_elm),
+   $List = Elm.List.make(_elm),
+   $Maybe = Elm.Maybe.make(_elm),
+   $Result = Elm.Result.make(_elm),
+   $Signal = Elm.Signal.make(_elm);
+   var _op = {};
+   var tsol = {ctor: "_Tuple0"};
+   var point = {x: 3,y: 4};
+   var plus1 = function (x) {    return x + 1;};
+   var numbers = _U.list([1,2,3]);
+   var helloWorld = function (x) {    return A2($Basics._op["++"],"Hello ",x);};
+   var deltron3030 = _U.update(point,{y: 5});
+   return _elm.Repl.values = {_op: _op,deltron3030: deltron3030,helloWorld: helloWorld,numbers: numbers,plus1: plus1,point: point,tsol: tsol};
+};
